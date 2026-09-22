@@ -78,3 +78,41 @@ button,input{font:inherit}
 @media(max-width:900px){.navlinks{display:none}.navcta{margin-left:auto}.menu{display:block}.mobile-nav{position:absolute;top:58px;left:8px;right:8px;background:var(--white);border:1px solid var(--line);border-radius:25px;padding:12px;display:flex;flex-direction:column;gap:4px;opacity:0;pointer-events:none;transform:translateY(-10px);transition:.25s}.mobile-nav.open{opacity:1;pointer-events:auto;transform:none}.mobile-nav a{padding:14px;border-radius:15px;font:.65rem "DM Mono"}.mobile-nav a:hover{background:var(--orange);color:white}.hero-layout{grid-template-columns:1fr}.hero-side{display:grid;grid-template-columns:1fr 1fr}.hero h1{font-size:clamp(5rem,22vw,10rem)}.hero-blob{opacity:.55}.bento{grid-template-columns:1fr 1fr}.card:first-child{grid-row:span 2}.page-intro{margin-left:0}.lab{grid-template-columns:1fr}.material-stage{min-height:700px}.steps{grid-template-columns:1fr 1fr}.roadmap{grid-template-columns:1fr 1fr}.benefits{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.container{width:calc(100% - 26px)}.nav{padding-left:16px}.page{padding-top:125px}.hero{padding-top:145px}.hero h1{margin:35px 0 25px}.hero-side{grid-template-columns:1fr}.mini-card:nth-child(2),.mini-card:nth-child(3){margin-left:0}.section-head{grid-template-columns:60px 1fr;gap:10px;margin-bottom:40px}.section-head h2{font-size:clamp(3.8rem,18vw,6rem)}.bento{display:flex;flex-direction:column}.card{min-height:260px}.big-number{font-size:6rem}.material-stage{padding:25px;min-height:670px}.lab-number{font-size:8rem}.steps{grid-template-columns:1fr}.step{min-height:150px}.calc{grid-template-columns:1fr;padding:25px}.roadmap{grid-template-columns:1fr}.road{min-height:280px}.loop{min-height:430px}.loop-ring{width:270px;height:270px}.loop-label{font-size:.46rem}.l1{top:12%}.l2{right:3%}.l3{bottom:10%}.l4{left:2%}.cta{padding:30px;min-height:500px}.cta h2{font-size:clamp(4.5rem,20vw,8rem)}.cursor{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* CO2 BENCHMARK PAGE */
+.co2-page{background:var(--cream);color:var(--ink)}
+.co2-hero{padding-bottom:45px}
+.co2-hero .section-head{margin-bottom:35px}
+.co2-hero .section-head h2{max-width:1000px}
+.co2-intro{max-width:920px;font:500 clamp(1.35rem,2.5vw,2.25rem)/1.08 "Space Grotesk";letter-spacing:-.04em;margin:0 0 45px 160px}
+.co2-intro em{font-style:normal;color:var(--orange)}
+.co2-board{background:var(--white);border:1px solid var(--line);border-radius:38px;padding:35px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.co2-board:before{content:"LCA / CO₂e / 1 TONNE";position:absolute;right:28px;top:25px;font:.52rem "DM Mono";color:#9a765f;letter-spacing:.08em}
+.co2-chart{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:stretch;margin-top:30px}
+.co2-card{border-radius:28px;padding:25px;min-height:430px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.co2-card.storage{background:var(--peach)}
+.co2-card.process{background:var(--orange);color:white}
+.co2-card.credit{background:var(--brown);color:white}
+.co2-card .tag{font:.55rem "DM Mono";opacity:.65;text-transform:uppercase;letter-spacing:.08em}
+.co2-card h3{font:600 clamp(1.55rem,2.5vw,2.5rem)/.95 "Space Grotesk";letter-spacing:-.05em;margin:50px 0 15px;max-width:320px}
+.co2-value{font:700 clamp(4.3rem,7vw,7rem)/.78 "Space Grotesk";letter-spacing:-.09em;margin-top:auto}
+.co2-value small{font:500 .27em "DM Mono";letter-spacing:0;text-transform:uppercase}
+.co2-card p{font-size:.72rem;line-height:1.5;max-width:330px;margin-top:18px;opacity:.78}
+.co2-card .barline{height:12px;background:rgba(95,41,15,.12);border-radius:99px;margin-top:20px;overflow:hidden}
+.co2-card.process .barline,.co2-card.credit .barline{background:rgba(255,255,255,.15)}
+.co2-card .barline i{display:block;height:100%;width:0;border-radius:inherit;animation:co2bar 1.4s .25s ease forwards}
+.co2-card.storage .barline i{width:0;background:var(--brown)}
+.co2-card.process .barline i{background:white;width:18%}
+.co2-card.credit .barline i{background:var(--peach);width:100%}
+@keyframes co2bar{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1);transform-origin:left}}
+.co2-negative{color:var(--peach)}
+.co2-axis{display:flex;justify-content:space-between;font:.52rem "DM Mono";color:#98715c;margin-top:12px}
+.co2-note{margin-top:16px;font:.57rem/1.55 "DM Mono";color:#94705d;max-width:900px}
+.method-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.method-card{background:var(--white);border:1px solid var(--line);border-radius:30px;padding:30px;min-height:300px}
+.method-card.orange{background:var(--orange);color:white}.method-card.dark{background:var(--brown);color:white}
+.method-card .mono{font-size:.55rem;opacity:.65}.method-card h3{font:600 clamp(1.7rem,3vw,3rem)/.95 "Space Grotesk";letter-spacing:-.055em;margin:35px 0 15px}.method-card p{font-size:.78rem;line-height:1.6;max-width:600px}.method-card ul{margin-top:18px;padding-left:18px;font-size:.72rem;line-height:1.7}
+.co2-scale{margin-top:16px;background:var(--white);border:1px solid var(--line);border-radius:30px;padding:30px;overflow:hidden}.co2-scale h3{font:600 2rem "Space Grotesk";letter-spacing:-.05em}.scale-row{display:grid;grid-template-columns:150px 1fr 100px;gap:15px;align-items:center;margin-top:25px}.scale-row label{font:.58rem "DM Mono"}.scale-track{height:22px;background:var(--cream);border-radius:999px;overflow:hidden}.scale-track i{display:block;height:100%;border-radius:inherit}.scale-row:nth-child(2) i{width:18%;background:var(--orange)}.scale-row:nth-child(3) i{width:100%;background:var(--brown)}.scale-row:nth-child(4) i{width:0;background:var(--peach)}.scale-row strong{font:600 1rem "Space Grotesk";text-align:right}
+.source-strip{margin-top:16px;padding:25px 30px;border-radius:28px;background:var(--ink);color:white}.source-strip p{font:.6rem/1.7 "DM Mono";color:rgba(255,255,255,.65)}.source-strip a{color:var(--peach);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.co2-intro{margin-left:0}.co2-chart{grid-template-columns:1fr}.co2-card{min-height:330px}.method-grid{grid-template-columns:1fr}.scale-row{grid-template-columns:110px 1fr 85px}}
+@media(max-width:600px){.co2-board{padding:18px}.co2-card{min-height:310px;padding:22px}.co2-card h3{margin-top:35px}.co2-value{font-size:5rem}.method-card{padding:24px}.co2-scale{padding:24px}.scale-row{grid-template-columns:1fr 70px;gap:8px}.scale-row .scale-track{grid-column:1 / -1;grid-row:2}.scale-row strong{grid-column:2;grid-row:1}}
